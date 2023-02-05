@@ -1,0 +1,311 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+$primary-font : 'Nunito', sans-serif;
+
+$small : "0px";
+$medium : "992px";
+$large : "1200px";
+
+$buttonX : .6rem;
+$buttonY : .6rem;
+$buttonFontSize :16px;
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: $primary-font;
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+input,select{
+    border:1px solid rgba(0,0,0,.15);
+    outline:none;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    font-size:14px;
+    width:100%;
+
+    &:is(:hover,:active,:focus){
+        border:1px solid rgba(0,0,0,.55);
+    }
+
+}
+
+.helper-text{
+    font-size:.8rem;
+    color:rgba(56, 55, 55, 0.5);
+}
+
+label{
+    font-size:14px;
+}
+
+button{
+    cursor:pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+ 
+
+    footer{
+        margin-top: auto;
+    }
+}
+
+
+.scw-button{
+    padding:$buttonX $buttonY;   
+    border:none;
+    outline:0;
+    border-radius: 5px;
+    font-size:$buttonFontSize;
+    display: flex;
+    color:#f7f7f7;
+}
+.scw-button-md{
+
+    padding:$buttonX*1.2 $buttonY*1.2;  
+    font-size:$buttonFontSize*1.2;
+}
+.scw-button-lg{
+    padding:$buttonX*1.7 $buttonY*1.7;  
+    font-size:$buttonFontSize*1.7;
+}
+.button-add{
+    background-color: #25D366;
+}
+.button-delete{
+    background-color: #dc3545;
+}
+.button-save{
+    background-color: #25D366;
+}
+.button-cancel{
+    background-color:#6c757d;
+}
+
+
+.pt-20{
+    padding-top:20px;
+}
+.pt-40{
+    padding-top:40px;
+}
+.pt-60{
+    padding-top:60px;
+}
+.pt-80{
+    padding-top:80px;
+}
+
+.pb-20{
+    padding-bottom:20px;
+}
+.pb-40{
+    padding-bottom:40px;
+}
+.pb-60{
+    padding-bottom:60px;
+}
+.pb-80{
+    padding-bottom:80px;
+}
+
+.fw-semi-bold{
+    font-weight:500;
+}
+.fw-bold{
+    font-weight:600;
+}
+
+
+.fs-10{
+    font-size:10px;
+}
+.fs-12{
+    font-size:12px;
+}
+.fs-14{
+    font-size:14px;
+}
+.fs-16{
+    font-size:16px;
+}
+.fs-18{
+    font-size:18px;
+}
+.fs-20{
+    font-size:20px;
+}
+.fs-22{
+    font-size:22px;
+}
+.fs-24{
+    font-size:24px;
+}
+.fs-26{
+    font-size:26px;
+}
+.fs-28{
+    font-size:28px;
+}
+.fs-30{
+    font-size:30px;
+}
+.fs-32{
+    font-size:32px;
+}
+.fs-34{
+    font-size:34px;
+}
+.fs-36{
+    font-size:36px;
+}
+
+
+
+.flex{
+    display:flex;
+}
+.align-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+
+
+.grid{
+    display:grid;
+}
+
+
+.product-list-grid{
+
+    @media screen and (min-width: $small) {
+       grid-template-columns: repeat(1,1fr);
+    }
+
+    @media screen and (min-width: $medium) {
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    @media screen and (min-width: $large) {
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+
+.product-box{
+    border:1px solid rgba(0,0,0,.2);
+    border-radius: .2rem;
+    width:100%;
+    min-height: 200px;
+    padding:1rem;
+
+    .info{
+        text-align: center;
+        font-size: 18px;
+        .p{
+            margin-bottom: 0;
+        }
+    }
+
+    
+}
+.border-bottom{
+    border-bottom:1px solid rgba(0,0,0,.15);
+}
+.border-top{
+    border-top:1px solid rgba(0,0,0,.15);
+}
+
+.mt-auto{
+    margin-top: auto;
+}
+
+
+.g-5{
+    gap:5px;
+}
+.g-10px{
+    gap:10px;
+}
+.g-15{
+    gap:15px;
+}
+.g-20{
+    gap:20px;
+}
+
+.container{
+    width:100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (min-width: $small) {
+        max-width:700px;
+    }
+
+    @media screen and (min-width: $medium) {
+        max-width:1100px;
+    }
+    
+    @media screen and (min-width: $large) {
+        max-width:1200px;
+    }
+    
+
+}
+
+
+
+// Product Add Form
+.form-width{
+    width:100%;
+    margin-top:1.5rem;
+
+    @media screen and (min-width: $small) {
+        max-width:100%
+    }
+
+    @media screen and (min-width: $medium) {
+        max-width:70%;
+    }
+    
+    @media screen and (min-width: $large) {
+        max-width:50%;
+    }
+}
+
+.form-group{
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+    gap:15px;
+    margin-bottom:1rem;
+    align-items: center;    
+}

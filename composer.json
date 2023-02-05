@@ -1,0 +1,21 @@
+{
+    "name": "anil/cms",
+    "autoload": {
+        "psr-4": {
+            "App\\": "./App",
+            "Core\\": "./Core"
+        },
+        "files":[
+            "./App/Helpers/app.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Cengizhan Anıl Onay",
+            "email": "cengizhananilonay@gmail.com"
+        }
+    ],
+    "require": {
+        "bramus/router": "~1.6"
+    }
+}
